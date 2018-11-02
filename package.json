@@ -36,5 +36,9 @@
     "navigate",
     "dependency"
   ],
-  "preview": true
+  "preview": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mamodom/package-json-dependencies-navigation"
+  }
 }
