@@ -1,7 +1,5 @@
 # Change Log
-All notable changes to the "code-npm-navigation" extension will be documented in this file.
-
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 ## [Unreleased]
-- Initial release
+
+- Adds links to npm dependencies to their npm package page
