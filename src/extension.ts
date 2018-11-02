@@ -20,19 +20,28 @@ class NpmDependenciesLinkProvider implements DocumentLinkProvider {
       documentText
     );
 
-    return Object.keys({ ...dependencies, ...devDependencies }).map(k => {
-      const keyIndex = documentText.indexOf(`"${k}"`);
+    const packages = { ...dependencies, ...devDependencies };
 
-      const position = document.positionAt(keyIndex + 1);
+    return Object.keys(packages)
+      .map(k => {
+        const version: string = packages[k];
 
-      return new DocumentLink(
-        new Range(
-          position,
-          new Position(position.line, position.character + k.length)
-        ),
-        Uri.parse(`https://www.npmjs.com/package/${k}`)
-      );
-    });
+        if (version.indexOf('/') !== -1) {
+          return null;
+        }
+        const keyIndex = documentText.indexOf(`"${k}"`);
+
+        const position = document.positionAt(keyIndex + 1);
+
+        return new DocumentLink(
+          new Range(
+            position,
+            new Position(position.line, position.character + k.length)
+          ),
+          Uri.parse(`https://www.npmjs.com/package/${k}`)
+        );
+      })
+      .filter((link): link is DocumentLink => !!link);
   }
 }
 
