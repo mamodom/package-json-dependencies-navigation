@@ -20,9 +20,8 @@ class NpmDependenciesLinkProvider implements DocumentLinkProvider {
 
     return Object.entries({ ...dependencies, ...devDependencies })
       .map(([k, version]) => {
-        if (version.indexOf('/') !== -1) {
-          return null;
-        }
+        if (version.indexOf('/') !== -1) return null;
+
         const keyIndex = documentText.indexOf(`"${k}"`);
 
         const position = document.positionAt(keyIndex + 1);
