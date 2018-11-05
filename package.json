@@ -8,7 +8,8 @@
     "vscode": "^1.28.0"
   },
   "activationEvents": [
-    "onLanguage:json"
+    "onLanguage:json",
+    "workspaceContains:**/package.json"
   ],
   "main": "./out/extension",
   "scripts": {
