@@ -8,20 +8,18 @@ import {
   Uri,
 } from 'vscode';
 
+import PackageJson from './PackageJson';
+
 class NpmDependenciesLinkProvider implements DocumentLinkProvider {
   provideDocumentLinks(document: TextDocument): ProviderResult<DocumentLink[]> {
     const documentText = document.getText();
 
-    const { dependencies = {}, devDependencies = {} } = JSON.parse(
-      documentText
-    );
+    const packageJson: PackageJson = JSON.parse(documentText);
 
-    const packages = { ...dependencies, ...devDependencies };
+    const { dependencies = {}, devDependencies = {} } = packageJson;
 
-    return Object.keys(packages)
-      .map(k => {
-        const version: string = packages[k];
-
+    return Object.entries({ ...dependencies, ...devDependencies })
+      .map(([k, version]) => {
         if (version.indexOf('/') !== -1) {
           return null;
         }
