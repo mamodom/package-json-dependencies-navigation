@@ -2,7 +2,7 @@
   "name": "package-json-dependencies-navigation",
   "displayName": "package.json dependencies navigation",
   "description": "Open npm dependencies' page from package.json",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "mamodom",
   "engines": {
     "vscode": "^1.28.0"
