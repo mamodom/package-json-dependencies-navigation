@@ -6,8 +6,6 @@ Open npm dependencies' page from package.json
 
 Pending animation
 
-## Release Notes
+## Changelog
 
-### 0.0.1
-
-Initial implementation
+see [changelog](CHANGELOG.md)
