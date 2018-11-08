@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.1.1] - 2018-11-08
+
+### Fixed
+
+- Adding [`@yarnpkg/lockfile`](https://www.npmjs.com/package/@yarnpkg/lockfile) as a dependency and not a devDependency
+
 ## [0.1.0] - 2018-11-06
 
 ### Added
@@ -12,3 +18,4 @@
 
 [0.0.1]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.0.0...0.0.1
 [0.1.0]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.0.1...0.1.0
+[0.1.1]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.0...0.1.1
