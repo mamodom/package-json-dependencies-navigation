@@ -2,7 +2,7 @@
   "name": "package-json-dependencies-navigation",
   "displayName": "package.json dependencies navigation",
   "description": "Open npm dependencies' page from package.json",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "mamodom",
   "engines": {
     "vscode": "^1.28.0"
@@ -24,8 +24,7 @@
     "vscode": "^1.1.21",
     "tslint": "^5.8.0",
     "@types/node": "^8.10.25",
-    "@types/mocha": "^2.2.42",
-    "@yarnpkg/lockfile": "^1.1.0"
+    "@types/mocha": "^2.2.42"
   },
   "license": "SEE LICENSE IN ./LICENSE",
   "categories": [
@@ -42,5 +41,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/mamodom/package-json-dependencies-navigation"
+  },
+  "dependencies": {
+    "@yarnpkg/lockfile": "^1.1.0"
   }
 }
