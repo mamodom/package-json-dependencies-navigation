@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.1.2] - 2018-11-08
+
+### Fixed
+
+- Including the version number when looking for the position of the package name
+
+  If the package name appears before the package declaration the link will be added in the incorrect position
+
+  ![](https://user-images.githubusercontent.com/5097424/48236991-1d8cc180-e39b-11e8-8019-c55944c4d6a3.png)
+
 ## [0.1.1] - 2018-11-08
 
 ### Fixed
@@ -19,3 +29,4 @@
 [0.0.1]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.0.0...0.0.1
 [0.1.0]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.0.1...0.1.0
 [0.1.1]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.0...0.1.1
+[0.1.2]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.1...0.1.2
