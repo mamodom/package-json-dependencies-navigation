@@ -8,12 +8,12 @@ import {
   workspace,
   RelativePattern,
 } from 'vscode';
-
-import PackageJson from './PackageJson';
-
 import { parse } from '@yarnpkg/lockfile';
 import * as fs from 'fs';
+import escapeRegExp = require('lodash.escaperegexp');
+
 import PackageLock from './PackageLock';
+import PackageJson from './PackageJson';
 
 class NpmDependenciesLinkProvider implements DocumentLinkProvider {
   async provideDocumentLinks(document: TextDocument): Promise<DocumentLink[]> {
@@ -29,7 +29,10 @@ class NpmDependenciesLinkProvider implements DocumentLinkProvider {
       .map(([k, version]) => {
         if (version.indexOf('/') !== -1) return null;
 
-        const keyIndex = documentText.indexOf(`"${k}"`);
+        const escapedVersion = escapeRegExp(version);
+        const keyIndex = documentText.search(
+          `"${k}"[^:]*:[^"]*"${escapedVersion}"`
+        );
 
         const position = document.positionAt(keyIndex + 1);
 
