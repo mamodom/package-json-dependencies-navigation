@@ -2,7 +2,7 @@
   "name": "package-json-dependencies-navigation",
   "displayName": "package.json dependencies navigation",
   "description": "Open npm dependencies' page from package.json",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "mamodom",
   "engines": {
     "vscode": "^1.28.0"
@@ -42,6 +42,8 @@
     "url": "https://github.com/mamodom/package-json-dependencies-navigation"
   },
   "dependencies": {
-    "@yarnpkg/lockfile": "^1.1.0"
+    "@types/lodash.escaperegexp": "^4.1.4",
+    "@yarnpkg/lockfile": "^1.1.0",
+    "lodash.escaperegexp": "^4.1.2"
   }
 }
