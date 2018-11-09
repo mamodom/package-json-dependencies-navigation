@@ -1,34 +1,28 @@
 {
-  "name": "package-json-dependencies-navigation",
-  "displayName": "package.json dependencies navigation",
-  "description": "Open npm dependencies' page from package.json",
-  "version": "0.1.2",
-  "publisher": "mamodom",
-  "engines": {
-    "vscode": "^1.28.0"
-  },
   "activationEvents": [
     "onLanguage:json",
     "workspaceContains:**/package.json"
   ],
-  "main": "./out/extension",
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install"
-  },
-  "devDependencies": {
-    "typescript": "^3.1.6",
-    "vscode": "^1.1.21",
-    "tslint": "^5.8.0",
-    "@types/node": "^10.12.3",
-    "@types/mocha": "^5.2.5"
-  },
-  "license": "SEE LICENSE IN ./LICENSE",
   "categories": [
     "Other"
   ],
+  "dependencies": {
+    "@yarnpkg/lockfile": "^1.1.0",
+    "lodash.escaperegexp": "^4.1.2"
+  },
+  "description": "Open npm dependencies' page from package.json",
+  "devDependencies": {
+    "@types/lodash.escaperegexp": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.3",
+    "tslint": "^5.8.0",
+    "typescript": "^3.1.6",
+    "vscode": "^1.1.21"
+  },
+  "displayName": "package.json dependencies navigation",
+  "engines": {
+    "vscode": "^1.28.0"
+  },
   "keywords": [
     "npm",
     "dependencies",
@@ -36,14 +30,20 @@
     "navigate",
     "dependency"
   ],
+  "license": "SEE LICENSE IN ./LICENSE",
+  "main": "./out/extension",
+  "name": "package-json-dependencies-navigation",
   "preview": true,
+  "publisher": "mamodom",
   "repository": {
     "type": "git",
     "url": "https://github.com/mamodom/package-json-dependencies-navigation"
   },
-  "dependencies": {
-    "@types/lodash.escaperegexp": "^4.1.4",
-    "@yarnpkg/lockfile": "^1.1.0",
-    "lodash.escaperegexp": "^4.1.2"
-  }
+  "scripts": {
+    "compile": "tsc -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "vscode:prepublish": "npm run compile",
+    "watch": "tsc -watch -p ./"
+  },
+  "version": "0.1.2"
 }
