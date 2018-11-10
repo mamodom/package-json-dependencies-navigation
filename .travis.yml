@@ -1,6 +1,15 @@
 language: node_js
 
 node_js:
-  - 'node'
+  - node
 
 sudo: false
+
+install:
+  - npm ci
+
+script:
+  - npm run compile
+
+deploy:
+  skip_cleanup: true
