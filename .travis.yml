@@ -1,4 +1,27 @@
 language: node_js
-
 node_js:
-  - 'node'
+  - node
+cache: npm
+sudo: false
+notifications:
+  email: false
+if: tag IS blank
+before_script:
+  - ARTIFACT_PATH="./`node ./scripts/version`"
+script:
+  - vsce package --out $ARTIFACT_PATH
+deploy:
+  - provider: script
+    script: node ./scripts/release.js
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: script
+    script: vsce publish --packagePath $ARTIFACT_PATH --pat $VSCE_TOKEN
+    skip_cleanup: true
+    on:
+      branch: master
+env:
+  global:
+    - secure: lvb0v3rDs0z5HeugoeHgE+YePJb3/HVs2rlgwkljROBbIVGGUGFKHKnbXaiJj2eEu8BDlhXq6ozIvnwjJuFw1Y41pchiSyC2leeYXBtVSXUCtucudNTFTjSOFBEdBNKkt52Z/4iw3cfRWCQaa5dbG2RmEn/RVFjmX4Pd71TA5yVW48h71bm88a8CBVPf0E7NZ+yO3/ZxaiDKaJpDmKNJ5pLnF7xRQ7FJnTJ05ipGrHbh5KGVoqIGY9+W1bGobJAxCau5xRbd1VQlTReJwYtI5vVy1l7eR/dZWZtwe8z/HDUFrsjh74Ise1YOfcDMcQVPPf5MkfsEBSc3F1s0lI+MRJggmqJbm/ny/PUf5UjnIqqAIoQzKRnMYSR9H3T6S3tHGLzeiNhs9udIv3mVbyGPsYp8RBImZyseAtoUXbJfO+OsYJVNpqkBj/3ZbASOML6aTfbZYatRUXoYasC9tCxiD8aK+p+S7pjf4921B+8mOR5VQmxXvuMegy8ANVjJVUCQlJqwIn2TOYl0ZMY203ONydoy2x4jpFNt2dZUXKBTNVIA3u5sbilozVq49ps1YHBSVCQZJduNN7Vgbrv9FUkKZtMj6vz21yE1I44fdEr4tHu0haMmes/XNycqW0Tn4C3mrGsoWr/KiV3avSEzTHnugiVNIzZVOR6BQVaJbU/2ji0=
+    - secure: KXm5LIHkOkJWsV0fztC+vK7jQnesRfu5qWP9I+EtA9iOpBS4nmsE1DGneRYLc4V4oogQh1RPrFZe6PfpO4JXj1yA0Jk8JN7/KyrCSCS/7YOg7NyIn22oWkMJFa0E6+t6e0Iv6w2ZPk/Lfb7JBEgsBpzlFxLpZj02J8oLy8Kq81i9lLIeh28B6/Q//RGGS647t1t4KG2aWTjy4/+9651OrLUuo9Qt8TnwcBL+TjG43rg0HRnhKD7bc4JSlJtuUtl6ie49Bunf0NOuUz5y5IZe3w/S7bcXGfA7zZ/Bp/6F9zf5n29ZWCrWGIVdIjm+0oBqHHio8P4D+y1wLofZ4ecLVd8/VkT0ii3Z/n9Qs+JIOQMWrUEvRZFzVCgX7HuS5l3fIYdq3q0AJvGLivlNzAAKrivbt58Hgktn51getizoPzyF4bqEfiliUHC7DA7yEBrRkEh54MPyzLYrTa+2FHMahB6CZ0qT0h6XY18wzfRQUq3zfJVlm3ocP/C6QoNgIbBctHAL3I3+nrGOQARH3+4htycymbJAN+JtWBLwGpvpP6DBUQoAui65PfvUq2+OdLN3s1N99l0Zl5sWy3qRGj2F/kOn6uf//vNcPChtjHTk7SgjD48tXmwLHxzPD/fS72WVlFAvX3eUyMxiEQfu2utzQeDOK6+KF4GWvR4KZZpLuWw=

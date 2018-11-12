@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.1.3] - 2018-11-11
+
+### Added
+
+- Create github releases using travis-ci
+- Publish to [Visual Studio Marketplace](https://marketplace.visualstudio.com/) using travis-ci
+- Publish `.vsix` to the created github release using travis-ci
+
 ## [0.1.2] - 2018-11-08
 
 ### Fixed
@@ -30,3 +38,4 @@
 [0.1.0]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.0.1...0.1.0
 [0.1.1]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.0...0.1.1
 [0.1.2]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.1...0.1.2
+[0.1.3]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.2...0.1.3
