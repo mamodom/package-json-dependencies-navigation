@@ -12,11 +12,13 @@
   },
   "description": "Open npm dependencies' page from package.json",
   "devDependencies": {
+    "@octokit/rest": "^15.17.0",
     "@types/lodash.escaperegexp": "^4.1.4",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.3",
     "tslint": "^5.8.0",
     "typescript": "^3.1.6",
+    "vsce": "^1.53.0",
     "vscode": "^1.1.21"
   },
   "displayName": "package.json dependencies navigation",
