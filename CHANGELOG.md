@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.1.4] - 2018-11-12
+
+### Added
+
+- travis-ci badge to README
+
 ## [0.1.3] - 2018-11-11
 
 ### Added
