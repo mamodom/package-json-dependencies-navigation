@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.1.5] - 2018-11-17
+
+### Changed
+
+- Using a workaround in travis' configuration since greenkeeper doesn't work with `npm ci` (see: https://github.com/greenkeeperio/greenkeeper-lockfile/issues/156)
+
 ## [0.1.4] - 2018-11-12
 
 ### Added

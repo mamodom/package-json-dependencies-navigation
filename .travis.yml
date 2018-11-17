@@ -6,6 +6,8 @@ sudo: false
 notifications:
   email: false
 if: tag IS blank
+
+install: case $TRAVIS_BRANCH in greenkeeper*) npm i;; *) npm ci;; esac;
 before_script:
   - ARTIFACT_PATH="./`node ./scripts/version`"
 script:
