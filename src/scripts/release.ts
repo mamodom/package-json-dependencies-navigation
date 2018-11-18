@@ -1,5 +1,5 @@
-const Octokit = require('@octokit/rest');
-const fs = require('fs');
+import Octokit = require('@octokit/rest');
+import fs = require('fs');
 
 const { name, version } = require('../package.json');
 
@@ -8,23 +8,19 @@ const run = async () => {
 
   const commit = process.env.TRAVIS_COMMIT;
 
-  if (!token) {
-    throw new Error('Missing GITHUB_PERSONAL_ACCESS_TOKEN');
-  }
+  if (!token) throw new Error('Missing GITHUB_PERSONAL_ACCESS_TOKEN');
 
-  const auth = {
+  const octokit = new Octokit();
+
+  octokit.authenticate({
     type: 'token',
     token: token,
-  };
+  });
 
   const repoInfo = {
     owner: 'mamodom',
     repo: name,
   };
-
-  const octokit = new Octokit();
-
-  octokit.authenticate(auth);
 
   const existingRelease = await octokit.repos
     .getReleaseByTag({
@@ -47,23 +43,20 @@ const run = async () => {
 
   const artifactName = `${name}-${version}.vsix`;
 
-  const file = await new Promise((resolve, reject) => {
+  const file = await new Promise<Buffer>((resolve, reject) => {
     fs.readFile(`./${artifactName}`, (err, data) => {
-      if (err) {
-        reject(err);
-      } else {
-        resolve(data);
-      }
+      if (err) reject(err);
+      else resolve(data);
     });
   });
 
-  await octokit.repos.uploadAsset({
+  await octokit.repos.uploadReleaseAsset({
     url: result.data.upload_url,
     name: artifactName,
     file: file,
     headers: {
-      'Content-Length': file.byteLength,
-      'Content-Type': 'application/vsix',
+      'content-length': file.byteLength,
+      'content-type': 'application/vsix',
     },
   });
 };
