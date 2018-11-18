@@ -1,5 +1,11 @@
 # Change Log
 
+## [0.1.6] - 2018-11-18
+
+### Chore
+
+- Updated @octokit/rest to version with correct typings
+
 ## [0.1.5] - 2018-11-17
 
 ### Changed
@@ -51,3 +57,6 @@
 [0.1.1]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.0...0.1.1
 [0.1.2]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.1...0.1.2
 [0.1.3]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.2...0.1.3
+[0.1.4]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.3...0.1.4
+[0.1.5]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.4...0.1.5
+[0.1.6]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.5...0.1.6
