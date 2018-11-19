@@ -1,7 +1,7 @@
 import Octokit = require('@octokit/rest');
 import fs = require('fs');
 
-const { name, version } = require('../package.json');
+const { name, version } = require('../../package.json');
 
 const run = async () => {
   const token = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
