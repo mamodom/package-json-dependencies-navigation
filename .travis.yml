@@ -14,7 +14,7 @@ script:
   - vsce package --out $ARTIFACT_PATH
 deploy:
   - provider: script
-    script: node ./scripts/release.js
+    script: node ./out/scripts/release.js
     skip_cleanup: true
     on:
       branch: master
