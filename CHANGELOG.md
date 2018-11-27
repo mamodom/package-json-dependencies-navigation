@@ -1,5 +1,25 @@
 # Change Log
 
+## [0.1.7] - 2018-11-26
+
+### Fix
+
+- Security vulnerability with `event-stream`, (see: https://github.com/dominictarr/event-stream/issues/116)
+
+```
+package-json-dependencies-navigation@0.1.7 /home/mamodom/dev/package-json-dependencies-navigation
+├── event-stream@3.3.4
+└─┬ vscode@1.1.21
+  ├─┬ gulp-remote-src-vscode@0.5.0
+  │ └── event-stream@3.3.4  deduped
+  ├─┬ gulp-symdest@1.1.0
+  │ └── event-stream@3.3.4  deduped
+  ├─┬ gulp-untar@0.0.7
+  │ └── event-stream@3.3.4  deduped
+  └─┬ gulp-vinyl-zip@2.1.0
+    └── event-stream@3.3.4  deduped
+```
+
 ## [0.1.6] - 2018-11-18
 
 ### Chore
@@ -60,3 +80,4 @@
 [0.1.4]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.3...0.1.4
 [0.1.5]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.4...0.1.5
 [0.1.6]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.5...0.1.6
+[0.1.7]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.6...0.1.7
