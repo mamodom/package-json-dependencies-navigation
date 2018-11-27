@@ -19,7 +19,8 @@
     "tslint": "^5.8.0",
     "typescript": "^3.1.6",
     "vsce": "^1.53.0",
-    "vscode": "^1.1.21"
+    "vscode": "^1.1.21",
+    "event-stream": "3.3.4"
   },
   "displayName": "package.json dependencies navigation",
   "engines": {
@@ -43,7 +44,6 @@
   },
   "scripts": {
     "compile": "tsc -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch -p ./"
   },
