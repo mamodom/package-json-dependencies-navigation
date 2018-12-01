@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.1.8] - 2018-12-01
+
+- Update @octokit/rest to the latest version 🚀
+
 ## [0.1.7] - 2018-11-26
 
 ### Fix
@@ -81,3 +85,4 @@ package-json-dependencies-navigation@0.1.7 /home/mamodom/dev/package-json-depend
 [0.1.5]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.4...0.1.5
 [0.1.6]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.5...0.1.6
 [0.1.7]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.6...0.1.7
+[0.1.8]: https://github.com/mamodom/package-json-dependencies-navigation/compare/0.1.7...0.1.8
