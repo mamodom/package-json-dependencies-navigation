@@ -12,7 +12,7 @@
   },
   "description": "Open npm dependencies' page from package.json",
   "devDependencies": {
-    "@octokit/rest": "16.0.3",
+    "@octokit/rest": "16.1.0",
     "@types/lodash.escaperegexp": "^4.1.4",
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.12.3",
@@ -48,5 +48,5 @@
     "vscode:prepublish": "npm run compile",
     "watch": "tsc -watch -p ./"
   },
-  "version": "0.1.7"
+  "version": "0.1.8"
 }
