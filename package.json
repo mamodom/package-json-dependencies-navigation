@@ -18,7 +18,7 @@
     "@types/node": "^10.12.3",
     "tslint": "^5.8.0",
     "typescript": "^3.1.6",
-    "vsce": "^1.53.0",
+    "vsce": "^1.64.0",
     "vscode": "^1.1.21",
     "event-stream": "3.3.4"
   },
