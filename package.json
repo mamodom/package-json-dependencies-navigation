@@ -14,7 +14,7 @@
   "devDependencies": {
     "@octokit/rest": "16.1.0",
     "@types/lodash.escaperegexp": "^4.1.4",
-    "@types/mocha": "^5.2.5",
+    "@types/mocha": "^7.0.1",
     "@types/node": "^10.12.3",
     "tslint": "^5.8.0",
     "typescript": "^3.1.6",
